@@ -7,4 +7,5 @@ router.get('/crawl', newsController.crawlAndStoreData);
 
 router.get('/news', newsController.getCrawledNews);
 
+
 module.exports = router;
