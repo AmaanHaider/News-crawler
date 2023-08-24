@@ -6,6 +6,8 @@ const newsController = require('../controllers/crawler.controllers');
 router.get('/crawl', newsController.crawlAndStoreData);
 
 router.get('/news', newsController.getCrawledNews);
+router.get('/newsarticle/:id', newsController.getFullArticleByNewsId);
+
 
 
 module.exports = router;

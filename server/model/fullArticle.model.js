@@ -4,6 +4,7 @@ const fullArticleSchema = new mongoose.Schema({
   headline: String,
   description : String,
   authorname : String,
+  articleImageSrc:String,
   articleContent:String,
   newsArticle: {
     type: mongoose.Schema.Types.ObjectId,
