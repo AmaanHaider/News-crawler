@@ -13,7 +13,7 @@ function truncateText(text, maxLength) {
   return text;
 }
 
-function ArticleCarousel({ handleReadMoreClick }) {
+function ArticleCarousel() {
   const [suggestedArticles, setSuggestedArticles] = useState([]);
 
   useEffect(() => {
@@ -85,9 +85,9 @@ function ArticleCarousel({ handleReadMoreClick }) {
                       {truncateText(suggestedArticle.content, 20)}
                     </Card.Text>
                     <Link
-                      to={`/news/${suggestedArticle._id}`}
+                      to={`/news/${suggestedArticle._id}`} // Use Link to navigate
                       className="btn btn-primary"
-                      onClick={handleReadMoreClick}
+                     
                     >
                       Read Full Article
                     </Link>
@@ -101,4 +101,5 @@ function ArticleCarousel({ handleReadMoreClick }) {
     </Row>
   );
 }
+
 export default ArticleCarousel;

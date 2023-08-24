@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
@@ -30,9 +30,7 @@ function ArticlePage() {
       });
   }, [id]);
 
-  const handleReadMoreClick = () => {
-    window.location.reload();
-  };
+ 
 
   if (loading) {
     return (
@@ -102,7 +100,7 @@ function ArticlePage() {
             <p className="mt-4">{article.articleContent}</p>
           </Col>
         </Row>
-        <ArticleCarousel handleReadMoreClick={handleReadMoreClick} />
+        <ArticleCarousel />
         <Row className="bg-light mt-4 mb-4">
           <Col>
             <div className="container text-center">
