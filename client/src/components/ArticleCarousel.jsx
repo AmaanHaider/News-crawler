@@ -85,6 +85,7 @@ function ArticleCarousel() {
                       {truncateText(suggestedArticle.content, 20)}
                     </Card.Text>
                     <Link
+                    target="_blank"
                       to={`/news/${suggestedArticle._id}`} // Use Link to navigate
                       className="btn btn-primary"
                      
